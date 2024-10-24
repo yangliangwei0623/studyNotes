@@ -991,6 +991,7 @@ int h[N], e[N], ne[N], idx;
 
   [字符串哈希](https://www.acwing.com/problem/content/843/)
 
+
 ### 简单树状数组
 ```c++
 
