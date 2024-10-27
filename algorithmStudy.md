@@ -773,6 +773,8 @@ pair<int, int>
 p = { , };
 //两个pari嵌套可以存储三个属性
 string，字符串
+    append(const string& str)在string的末尾增加一个字符串
+    append(const char c)在string的末尾增加一个字符
     重载"+"
     size()/length()  返回字符串长度
     empty()
@@ -3941,3 +3943,23 @@ int main()
 想出了一个能过70%数据点的算法，O(mlogn),可优化到nlogn(好难想。。。。),即二分最后一次升级技能所得到的攻击力
 
 [冶炼金属](https://www.acwing.com/problem/content/4959/)过咯，需要尤其注意数据范围，判断会不会爆int
+
+
+
+## 蓝桥杯刷题
+
+### 1.递推与递归
+
+[递归实现指数型枚举](https://www.acwing.com/problem/content/description/94/)
+
+[递归实现组合型枚举](https://www.acwing.com/problem/content/95/)
+
+[递归实现排列型枚举](https://www.acwing.com/problem/content/96/)
+
+[带分数](https://www.acwing.com/problem/content/description/1211/)
+
+[费解的开关](acwing.com/problem/content/description/97/)
+曾经看来如此费解的一道题目现在也可以轻松解决了，还是有进步的嘛。
+
+[飞行员兄弟](https://www.acwing.com/problem/content/118/)
+考虑到状态有限就直接暴力枚举,首先想到在最优解中，一个灯泡一定只按一次且按的先后顺序无关，直接枚举所有方案，找出合法方案中按的灯泡最少的那个
