@@ -1948,8 +1948,7 @@ $$
 
 ```c++
 int gcd(int a,int b){
-    if(!a)return b;//处理a，b一开始就为0的情况
-    if(!b)return a;
+    if(!b)return a;//处理b一开始就为0的情况
     return gcd(b,a%b);//不能return gcd(a%b,b),当a%b<b时就会无限递归，导致系统栈爆掉
 }
 //float point exception 错误 是/ or % 的操作数为0
@@ -2074,7 +2073,7 @@ LL qmi(int a, int b, int p)
 
 > 引理：
 >
-> 对于 x , y 的二元一次不定方程 a x + b y = c  ，其有解的充要条件为 gcd ⁡ ( a , b ) ∣ c（证明略）
+> 对于 x , y 的二元一次不定方程 a x + b y = c  ，其有解的充要条件为 gcd ⁡ ( a , b ) ∣ c（证明略），这里的x，y是任意整数
 
 ```c++
 // 求x, y，使得ax + by = gcd(a, b)
@@ -3963,3 +3962,40 @@ int main()
 
 [飞行员兄弟](https://www.acwing.com/problem/content/118/)
 考虑到状态有限就直接暴力枚举,首先想到在最优解中，一个灯泡一定只按一次且按的先后顺序无关，直接枚举所有方案，找出合法方案中按的灯泡最少的那个
+
+### 2.二分
+
+[四平方和](https://www.acwing.com/problem/content/description/1223/)
+
+根据数据范围可以知道我们能接受的时间复杂度是在O(nlongn)以下的级别，暴力做法有三重循环，这是我们不能接受的，所以想到进行两重循环预处理出两个数的平方和，之后再用两重循环枚举另外两个数的平方和
+
+### 3.前缀和与差分
+
+[激光炸弹](https://www.acwing.com/problem/content/description/101/)
+
+一道二维前缀和的题目，二维前缀和计算时画画图就能推得相关公式
+
+[K倍区间](https://www.acwing.com/problem/content/description/1232/)
+
+需要用数学知识进一步优化，简而言之 (a-b)%k==0  equals  a%k==b%k
+
+### 4.数学知识与简单dp
+
+[买不到的数目](https://www.acwing.com/problem/content/1207/)
+
+考查数论知识，**如果a,b是正整数且互质，那么由ax+by不能表示的最大整数是(a-1)(b-1)-1**
+这种题可以暴力做一下找规律或者骗分
+
+[地宫取宝](https://www.acwing.com/problem/content/description/1214/)
+
+这种线性dp终于做着算是有一点点感觉了，首先要想到可以用dp做，其次就是设计好状态表示，这个就是缺啥就加一维描述啥，转移方程一般也没有特别难想，初始状态很多时候不好设置，可以对物品的某些属性做个偏移(让他不为0，方便我们将0设置为初始状态)。可以考虑将第一次或者"第0次"设置为初始状态
+
+### 5.枚举、模拟
+
+[连号区间数](https://www.acwing.com/problem/content/1212/)
+
+这种简单的模拟题就要多去寻找其中暗含的小规律
+
+[递增三元组](https://www.acwing.com/problem/content/1238/)
+
+很多时候都是先想到一个纯暴力的做法，然后再想想能不能优化
