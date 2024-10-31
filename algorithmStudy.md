@@ -3998,4 +3998,40 @@ int main()
 
 [递增三元组](https://www.acwing.com/problem/content/1238/)
 
-很多时候都是先想到一个纯暴力的做法，然后再想想能不能优化
+很多时候都是先想到一个纯暴力的做法，然后再想想能不能优化，此题可用二分，双指针，哈希+前缀和
+
+[特别数的和](https://www.acwing.com/problem/content/1247/)
+
+比较简单，没啥好说的
+
+[错误票据](https://www.acwing.com/problem/content/1206/)
+
+刚好是一道考察我们不擅入的那种读入方式的题目，详情见应试技巧里的读入部分
+
+[回文日期](https://www.acwing.com/problem/content/468/)
+
+一道经典的日期题，注意闰年的定义，注意字符串与int之间转换时前导0的影响；
+注意枚举两日期之间的日子的写法
+
+[移动距离](https://www.acwing.com/problem/content/1221/)
+
+比较简单，没啥好说的（蓝桥杯只给一个测试样例好可恶，下次记得自己写个小点儿的试一下，不然很容易出现错误）
+
+[日期问题](https://www.acwing.com/problem/content/1231/)
+
+超级大⑩山代码来啦！
+
+[航班时间](https://www.acwing.com/problem/content/1233/)
+
+输入输出流的使用方法？
+
+[外卖店优先级](https://www.acwing.com/problem/content/1243/)
+
+过了八个点，应该是存在细微的逻辑漏洞
+
+### 6.双指针
+
+### 7.BFS
+
+### 8.图论
+
