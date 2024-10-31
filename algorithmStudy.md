@@ -60,16 +60,16 @@
 
 **关于输入输出的一些说明**
 
-getline(cin,s)可以完整的读入一行并且读入换行符，但是换行符不会被放入s中，也就是在换行符已经被读掉了
+**1**.getline(cin,s)可以完整的读入一行并且读入换行符，但是换行符不会被放入s中，也就是在换行符已经被读掉了
 而正常的cin 会读到遇到空格或者换行符，即换行符未被读掉
-简而言之，**cin之后使用getline需要在cin之后读掉换行符**
+简而言之，**cin(scanf)之后使用getline需要在cin之后读掉换行符**
 
 ```c++
 str="\n";
 getline(cin,str);//将回车符作为输入流cin以清除缓存
 ```
 
-下面关于sstream（主要用于类型转换）的用法做单简单说明
+**2**.下面关于sstream（主要用于类型转换）的用法做单简单说明
 
 - 題目：输入的第一行有一个数字 N 代表接下來有 N 行资料，每一行资料里有不固定个数的整数(最多20个，每行最大200个字元)，编程將每行的总和打印出來。
 
@@ -116,7 +116,20 @@ int main()
 }
 ```
 
+3.sscanf函数(从已有字符串读入)的使用
 
+[航班时间](https://www.acwing.com/problem/content/1233/)
+对于该题的数据读入，我们可以用getline将一整行的数据读入s中，由于这一行数据的格式可以通过变化使得他们一样，然后我们再从s中读入相应的时分秒
+
+```c++
+	string line;
+    getline(cin, line);
+    //保持一致:
+    if (line.back() != ')') line += "(+0)";
+    //把字符串中的数字信息读入到变量之中
+    int h1, m1, s1, h2, m2, s2, d;
+    sscanf(line.c_str(), "%d:%d:%d %d:%d:%d (+%d)", &h1, &m1, &s1, &h2, &m2, &s2, &d);
+```
 
 
 
@@ -3130,10 +3143,6 @@ int main()
 
 
 
-
-
-
-
 ## 7.再论搜索
 
 ### 1.BFS
@@ -4031,7 +4040,41 @@ int main()
 
 ### 6.双指针
 
-### 7.BFS
+[日志统计](https://www.acwing.com/problem/content/1240/)
+
+双指针具体的内容参见基础算法里的双指针
+
+### 7.BFS 、DFS
+
+[大臣的旅费](https://www.acwing.com/problem/content/description/1209/)
+
+本质上是求树的直径，该问题有O(n)的解法
+
+**任取一点x**
+**找到距离x最远的点y**
+**从y开始遍历，找到离y最远的点，与y最远的点的距离是树的直径**
+
+证明略
+
+
 
 ### 8.图论
+
+
+
+### 9.贪心
+
+[股票买卖 II](https://www.acwing.com/problem/content/1057/)
+
+可用dp的状态机模型或者贪心来解决
+
+[糖果传递](https://www.acwing.com/problem/content/124/)
+
+使用绝对值不等式解决，我能想到就怪了
+
+[雷达设备](https://www.acwing.com/problem/content/114/)
+
+一道曾经无比困难的题现在自己就可以写出来啦
+
+
 
